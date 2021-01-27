@@ -60,6 +60,7 @@ services:
       - PDNS_default_ttl=1500
       - PDNS_allow_axfr_ips=172.6.0.21
       - PDNS_only_notify=172.6.0.21
+      - PDNS_enable_lua_records=yes
     depends_on:
       - mariadb
 
@@ -86,6 +87,7 @@ services:
       - PDNS_disable_axfr=yes
       - PDNS_allow_notify_from=172.6.0.20
       - SUPERMASTER_IPS=172.6.0.20
+      - PDNS_enable_lua_records=yes
     depends_on:
       - mariadb
       - pdns-master
